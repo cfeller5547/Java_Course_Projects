@@ -1,0 +1,120 @@
+package CuyamacaPayroll;
+import java.util.Scanner;
+
+enum EMPLOYEE_TYPE{SALARIED, MONTHLY, HOURLY,QUIT,UNKNOWN};
+
+
+public class CuyamacaPayroll {
+
+	static final int MAXIMUM_EMPLOYEE = 5;
+	
+	public static void main(String[] args) {
+		Scanner Keyboard = new Scanner(System.in);
+		
+		EMPLOYEE_TYPE type;
+		String input_employee_type;
+		String first_name;
+		String last_name;
+		double yearly_salary;
+		double hourly_rate;
+		double hours_worked;
+		double federal_taxes = 0.12;
+		double state_taxes = 0.03;
+		double retirement_pension = 0.04;
+		double hours_worked2[] = new double[5];
+		double total_hours = 0.0;
+		
+		
+		System.out.println("Enter the employee type");
+		input_employee_type = Keyboard.nextLine();
+		type = get_employee_type(input_employee_type);
+		switch(type) {
+		case SALARIED:
+			System.out.println("Enter the employee first name");
+			first_name = Keyboard.nextLine();
+			System.out.println("Enter the employee last name");
+			last_name = Keyboard.nextLine();
+			System.out.println("Enter the employee yearly salary");
+			yearly_salary = Keyboard.nextDouble();
+			federal_taxes = (yearly_salary*federal_taxes);
+			state_taxes = (yearly_salary*state_taxes);
+			retirement_pension = (yearly_salary * retirement_pension);
+			System.out.println("Employee: " + first_name + " " + last_name);
+			System.out.println("Gross pay: " +  yearly_salary);
+			System.out.println("Federal taxes witheld: " + federal_taxes);
+			System.out.println("State taxes witheld: " + state_taxes);
+			System.out.println("Net pay: " + (yearly_salary * 1/13) + (-federal_taxes) + (-state_taxes) +  (-retirement_pension));
+			break;
+		case MONTHLY:
+			System.out.println("Enter the employee first name");
+			first_name = Keyboard.nextLine();
+			System.out.println("Enter the employee last name");
+			last_name = Keyboard.nextLine();
+			System.out.println("Enter the employee hourly rate");
+			hourly_rate = Keyboard.nextDouble();
+			for(int i = 1; i <= 4; i++) {
+				System.out.println("Hours worked for week " + i);
+				hours_worked2[i] = Keyboard.nextDouble();
+				total_hours += hours_worked2[i];
+			}
+			
+			double total_pay = (total_hours * hourly_rate);
+			double overtime_pay = (total_hours - 40) * 1.5;
+			if(total_hours > 40 ) {
+				total_pay += overtime_pay; 
+			}
+			federal_taxes = (total_pay*federal_taxes);
+			state_taxes = (total_pay*state_taxes);
+			System.out.println("Employee: " + first_name + " " + last_name);
+			System.out.println("Regular Wages: " +  total_pay);
+			System.out.println("Overtime Wages: " +  overtime_pay);
+			System.out.println("Gross Wages: " + (total_pay + overtime_pay));
+			System.out.println("Federal taxes: " +  federal_taxes);
+			System.out.println("State taxes: " +  state_taxes);
+			System.out.println("Net pay: " + (total_pay + overtime_pay) + (-federal_taxes) + (-state_taxes));
+			
+			
+			break;
+		case HOURLY:
+			double gross_pay;
+			System.out.println("Enter the employee first name");
+			first_name = Keyboard.nextLine();
+			System.out.println("Enter the employee last name");
+			last_name = Keyboard.nextLine();
+			System.out.println("Enter the employee hourly rate");
+			hourly_rate = Keyboard.nextDouble();
+			System.out.println("Enter the employee hours worked for the month");
+			hours_worked = Keyboard.nextInt();
+			System.out.println("Employee: " + first_name + " " + last_name);
+			System.out.println("Gross Wages: " + (hourly_rate * hours_worked));
+			System.out.println("No taxes deducted");
+		case QUIT:
+			System.exit(0);
+		case UNKNOWN:
+			System.out.println("unknown employee type");
+			break;
+		}
+	}
+
+	static EMPLOYEE_TYPE get_employee_type(String Keyboard) {
+		if ( Keyboard.equalsIgnoreCase( "salaried" )){
+			return EMPLOYEE_TYPE.SALARIED;
+		}
+		else if ( Keyboard.equalsIgnoreCase( "monthly" )){
+			return EMPLOYEE_TYPE.MONTHLY;
+		}
+		else if ( Keyboard.equalsIgnoreCase( "hourly" )){
+			return EMPLOYEE_TYPE.HOURLY;
+		}
+		else if ( Keyboard.equalsIgnoreCase( "quit" )){
+			return EMPLOYEE_TYPE.QUIT;
+		}
+		else {
+			return EMPLOYEE_TYPE.UNKNOWN;
+		}
+	}
+	
+}
+
+
+	

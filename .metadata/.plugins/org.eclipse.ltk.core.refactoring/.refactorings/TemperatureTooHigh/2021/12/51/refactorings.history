@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;TemperatureTooHigh.java&apos; to &apos;TemperatureTooHigh/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;TemperatureTooHigh&apos;&#x0D;&#x0A;- Destination element: &apos;TemperatureTooHigh/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;TemperatureTooHigh.TemperatureTooHigh.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;" element1="/src&lt;TemperatureTooHigh{TemperatureTooHigh.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1639378187249" units="1" version="1.0"/>
+</session>

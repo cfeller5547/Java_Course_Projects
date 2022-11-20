@@ -1,0 +1,79 @@
+package looping;
+import java.util.Scanner;
+
+public class looping {
+
+	public static void main(String[] args) {
+	
+		switchStatement();
+		//whileLoop();
+		//doWhileLoop();
+		//forLoop();
+	}
+
+	public static void switchStatement() {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter a number from 1-12");
+		
+		int month = input.nextInt();
+		
+		
+		switch(month) {
+		 
+		case 1:
+			System.out.println("January");
+			break;
+		case 2:
+			System.out.println("February");
+		case 3:
+			System.out.println("March");
+			break;
+		case 4:
+			System.out.println("April");
+		case 5:
+			System.out.println("May");
+			break;
+		case 6:
+			System.out.println("June");
+		case 7:
+			System.out.println("July");
+			break;
+		case 8:
+			System.out.println("August");
+		case 9:
+			System.out.println("September");
+			break;
+		case 10:
+			System.out.println("October");
+		case 11:
+			System.out.println("November");
+			break;
+		case 12:
+			System.out.println("December");
+			break;
+		default: 
+			System.out.println("Invalid input, please enter a number from 1-12");
+			
+		}
+	}
+	
+/*
+ * public static void whileLoop() { int i = 20; while(i != 0) {
+ * System.out.println(i); i--;
+ * 
+ * } }
+ * 
+ * public static void doWhileLoop() { int i = 19; do { System.out.println(i);
+ * i=i-2;
+ * 
+ * } while(i >= 0); }
+ * 
+ * public static void forLoop() { for(int i = 1; i <= 20; i++) {
+ * 
+ * if(i%2 == 0) { System.out.println(i + " "); } }
+ * 
+ * } 
+ */
+}

@@ -1,0 +1,9 @@
+
+Part Number: P1
+Part Name: Part1
+Manufacturer's name: Man1
+bin number: Bin1
+Part Number: P2
+Part Name: Part2
+Manufacturer's name: Man2
+bin number: Bin2

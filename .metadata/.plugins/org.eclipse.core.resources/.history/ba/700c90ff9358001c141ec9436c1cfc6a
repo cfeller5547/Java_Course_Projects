@@ -1,0 +1,127 @@
+package Vehicle;
+import java.util.Scanner;
+
+class Vehicle 
+{
+
+	int max_speed;
+	String name;
+	
+
+	public Vehicle(String initName, int initMaxSpeed) 
+	{
+		name = initName;
+		max_speed = initMaxSpeed;
+	}		
+	
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
+	
+	public String getName() 
+	{
+		return name;
+	}
+	
+	
+	public void setMaxSpeed(int max_speed) 
+	{
+		this.max_speed = max_speed;
+	}
+	
+	public int getMaxSpeed() 
+	{
+		return max_speed;
+	}
+
+}
+
+
+class Car extends Vehicle {
+	
+	int number_of_cylinder;
+
+	
+	public Car(String initName, int initMaxSpeed, int initCarCylinderNum) {
+		super(initName, initMaxSpeed);
+		number_of_cylinder = initCarCylinderNum;
+		
+	}
+	
+	public void setCarNumberOfCylinder(int number_of_cylinder) {
+		this.number_of_cylinder = number_of_cylinder;
+	}
+	
+	public int getCarNumberOfCylinder() {
+		return number_of_cylinder;
+	}
+}
+
+class Airplane extends Vehicle{
+	
+	public Airplane(String initName, int initMaxSpeed, int initAirplaneEngineNum) {
+		super(initName, initMaxSpeed);
+		size_of_engine = initAirplaneEngineNum;
+		
+	}
+	
+	
+	int size_of_engine;
+	
+	
+	public void setAirplaneEngineSize(int size_of_engine) {
+		this.size_of_engine = size_of_engine;
+	}
+	
+	public int getAirplaneEngineSize() {
+		return size_of_engine;
+	}
+}
+
+
+class VehicleDemo 
+{
+	
+	public void display() 
+	{	
+		Car sedan = new Car("Car", 90, 6);
+		System.out.println("Enter the name of the car");
+	}
+	
+}
+
+class Run
+{
+
+
+
+public static void main(String[] args) 
+{
+	Vehicle demo = new Vehicle("a", 3);
+	System.out.println("Enter the name of the car");
+}
+
+}
+
+
+
+/*
+System.out.println("Enter the name of the car");
+Scanner input = new Scanner(System.in);
+a = input.nextLine();
+sedan.setName(a);
+
+System.out.println("Enter the max speed of the car");
+Scanner input2 = new Scanner(System.in);
+b = input2.nextInt();
+//sedan.setMaxSpeed(b);
+
+System.out.println("Enter the cylinder size of the car");
+Scanner input3 = new Scanner(System.in);
+c = input3.nextInt(c);
+//sedan.setCarNumberOfCylinder(c);
+
+//String test = sedan.getName();
+//System.out.println(test);
+ */

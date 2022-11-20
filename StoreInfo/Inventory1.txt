@@ -1,0 +1,21 @@
+Part Number: P2
+Part Name: Part2
+Manufacturer's name: Part2Man
+bin number: Part2BinPart Number: b8
+Part Name: bait
+Manufacturer's name: test
+bin number: b8Part Number: 8a
+Part Name: test
+Manufacturer's name: bait
+bin number: 9Part Number: 9a
+Part Name: test
+Manufacturer's name: by
+bin number: me7Part Number: 4
+Part Name: test4
+Manufacturer's name: testing4
+bin number: 40
+-------------------------
+Part Number: 65
+Part Name: 65p
+Manufacturer's name: test65
+bin number: p65
